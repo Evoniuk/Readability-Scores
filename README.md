@@ -10,10 +10,10 @@ These measure are not without their flaws. One that comes to mind is that there 
 
 > Especially interesting is the combination of immediately charming people and the opportunity to communicate.
 
-To score a much lower readability than
+To score an ease of -18.9 and a grade of 19.37, while
 
 > While I cleave to this inane life, an abject hatred arises in me for my terse existence.
 
-The first sentence has an ease of -18.9 and a grade of 19.37. The second has an ease of 70.1 and a grade of 7.7.
+gets an ease of 70.1 and a grade of 7.7.
 
 Despite their shortcomings, however, these measures are decent heuristics for length texts.
