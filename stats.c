@@ -49,8 +49,8 @@ float grade_level(int words, int sentences, int syllables) {
 // helper functions:
 
 int is_word_delimeter(char character) {
-  return character == ' '  ||
-         character == '\n' ||
+  return character == ' ' ||
+         character == '.' ||
          character == '-'  ? 1 : 0;
 }
 
