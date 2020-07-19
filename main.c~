@@ -1,8 +1,5 @@
-// this program calculates the Flesch Reading Ease score 
-// and the Flesch–Kincaid grade level of text supplied 
-// in the file given as input.
-
-// the possible flags are w, s, y, g, and r:
+// this program calculates the Flesch Reading Ease score and the Flesch–Kincaid grade level
+// of text supplied in the file given as input. The possible flags are w, s, y, g, and r:
 // w: word count
 // s: sentence count
 // y: syllable count
