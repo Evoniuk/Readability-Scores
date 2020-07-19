@@ -2,7 +2,7 @@
 // and the Flesch–Kincaid grade level of text supplied 
 // in the file given as input.
 
-// the possible flags are w, s, y, g, and r:
+// the possible flags are as follows: 
 // w: word count
 // s: sentence count
 // y: syllable count
