@@ -16,7 +16,7 @@ To score an ease of -18.9 and a grade of 19.37, while
 
 gets an ease of 70.1 and a grade of 7.7.
 
-Despite their shortcomings, however, these measures are decent heuristics for length texts.
+Despite their shortcomings, however, these measures are decent heuristics for lengthy texts.
 
 ## The Interface
 
@@ -44,7 +44,7 @@ If you wish to know all five statistics regarding `FILENAME.txt`.
 
 ## The Implementation
 
-The implementation of this program is done by four C files:
+The implementation of this program is carried out in four C files:
 
 * `main.c`
 * `handle_input.c`
@@ -95,14 +95,14 @@ There are three statistics about our file that need to be calculated:
 * Syllable count
 * Sentence count
 
-In each of these cases, the method used was to find characters that are, more or less, equivalent to a word, syllable, or sentence appearing, and then to count the number of occurences of such characters. For words, this is a space, a period, or a '-'. For syllables, the characters to look for would be any of the vowels. And for sentences, they would be a period, an exclamation point, or a question mark.
+In each of these cases, the method used is to find characters that are, more or less, equivalent to a word, syllable, or sentence appearing, and then to count the number of occurences of such characters. For words, this is a space, a period, or a '-'. For syllables, the characters to look for would be any of the vowels. And for sentences, they would be a period, an exclamation point, or a question mark.
 
 But simply counting the occurences of each of these symbols does not result in a very accurate count. If we take sentences for example, looking for periods, exclamation points, and question marks would make things like ellipses and '!?!?' impact the count too much. Because of this, whenever we encounter one of these characters when looking for sentences, we skip to the next character that isn't one of these.
 
 What's nice about this method is that it works for counting words and syllables as well: for words, we wouldn't want a dash surrounded by spaces to count as three words, so as soon as we encounter the first space we increment our count and skip to the next character that isn't a dash, space, or period.
 
-For syllables this is less accurate, but it isn't as bad, as consecutive vowels in English almost always denote a single syllable. The real problem with the inaccuracy of the syllable count would be words like 'are', which has one syllable but would be counted as having two, and 'interesting', which (in my dialect of English) has three syllables, but would be counted as having four. Ideally this over- and under-counting would cancel out, but the fact is that the syllable count will just have to be inaccurate.
+For syllables this is less accurate, but it isn't so bad, as consecutive vowels in English almost always denote a single syllable. The real problem with the inaccuracy of the syllable count would be words like 'are', which has one syllable but would be counted as having two, and 'interesting', which (in my dialect of English) has three syllables, but would be counted as having four. Ideally this over- and under-counting would cancel out to some degree, but the fact is that the syllable count will just have to be inaccurate if we don't want to reference a dictionary.
 
 ### `output.c`
 
-`output.c` has a single function, `void output(int words, int sentences, int syllables, int flags)`, which takes in the stats of the text and output the information that the user wishes to see, based on what flags have been selected.
+`output.c` has a single function, `void output(int words, int sentences, int syllables, int flags)`, which takes in the stats of the text and outputs the information that the user wishes to see, based on what flags have been selected.
