@@ -7,7 +7,7 @@ int word_count(char* string) {
   for (char* character = string; *character != 0; character++) {
     if (is_word_delimeter(*character)) {
       result++;
-      while (is_word_delimeter(*(character + 1)))
+      while (is_word_delimeter(*(character + 1))) 
         character++;
     }
   }
@@ -46,7 +46,7 @@ float grade_level(int words, int sentences, int syllables) {
   return .39*((float) words / sentences) + 11.8*((float) syllables / words) - 15.59;
 }
 
-// helper functions:
+// helpers:
 
 int is_word_delimeter(char character) {
   return character == ' ' ||
