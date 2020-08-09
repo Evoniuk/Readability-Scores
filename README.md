@@ -23,7 +23,7 @@ Despite their shortcomings, however, these measures are decent heuristics for le
 The interface of this program is fairly simple. You can simply type
 
 ```bash
-$ PROGRAM -r FILENAME.txt
+$ ./read -r FILENAME.txt
 ```
 
 To see the reading ease of the text contained in `FILENAME.txt`. Here the `-r` flag was selected, which will print the reading ease. The complete list of flags are as follows:
