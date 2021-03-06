@@ -1,12 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-
-void get_filename(int argc, char** argv, char* filename) {
-  for (int i = 1; i < argc; i++)
-    if (argv[i][0] != '-') strcpy(filename, argv[i]);
-}
-
 // flags = 1: -w, 2: -s, 4: -g, 8: -r, 16: -y
 int get_flags(int argc, char** argv) {
   int flags = 0;
@@ -22,19 +13,4 @@ int get_flags(int argc, char** argv) {
                  0;
 
   return flags;
-}
-
-char* get_file(char* filename) {
-  FILE* file = fopen(filename, "r");
-
-  fseek(file, 0L, SEEK_END);
-  long numbytes = ftell(file);
-  fseek(file, 0L, SEEK_SET);
-
-  char* contents = (char*)calloc(numbytes, sizeof(char));
-  fread(contents, sizeof(char), numbytes, file);
-
-  fclose(file);
-
-  return contents;
 }

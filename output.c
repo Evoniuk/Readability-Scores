@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 #include "./header.h"
 
 // flags = 1: -w, 2: -s, 4: -g, 8: -r, 16: -y

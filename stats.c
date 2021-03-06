@@ -1,13 +1,13 @@
-int is_word_delimeter(char character);
-int is_vowel(char character);
-int is_sentence_delimeter(char character);
+static int is_word_delimeter(char character);
+static int is_vowel(char character);
+static int is_sentence_delimeter(char character);
 
 int word_count(char* string) {
   int result = 0;
   for (char* character = string; *character != 0; character++) {
     if (is_word_delimeter(*character)) {
       result++;
-      while (is_word_delimeter(*(character + 1))) 
+      while (is_word_delimeter(*(character + 1)))
         character++;
     }
   }
@@ -48,13 +48,13 @@ float grade_level(int words, int sentences, int syllables) {
 
 // helpers:
 
-int is_word_delimeter(char character) {
+static int is_word_delimeter(char character) {
   return character == ' ' ||
          character == '.' ||
          character == '-'  ? 1 : 0;
 }
 
-int is_vowel(char character) {
+static int is_vowel(char character) {
   return character == 'a' ||
          character == 'e' ||
          character == 'i' ||
@@ -62,7 +62,7 @@ int is_vowel(char character) {
          character == 'u' ? 1 : 0;
 }
 
-int is_sentence_delimeter(char character) {
+static int is_sentence_delimeter(char character) {
   return character == '.' ||
          character == '!' ||
          character == '?' ? 1 : 0;

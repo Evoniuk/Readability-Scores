@@ -1,6 +1,6 @@
 CC = gcc
 
-all: read
+# all: read
 
-reading: main.c handle_input.c stats.c output.c
-	$(CC) -o reading main.c handle_input.c stats.c output.c
+reading: main.c handle_flags.c stats.c output.c
+	$(CC) -o reading main.c handle_flags.c stats.c output.c

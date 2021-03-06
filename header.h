@@ -1,10 +1,8 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
 
-// handle input
-void  get_filename(int argc, char** argv, char* filename);
+// handle flags
 int   get_flags(int argc, char** argv);
-char* get_file(char* filename);
 
 // statistics
 int   word_count(char* string);
